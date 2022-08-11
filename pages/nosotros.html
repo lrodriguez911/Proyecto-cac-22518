@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Grupo 4">
+  <meta name="description" content="Proyecto javascript productos ">
+  <meta name="keywords" content="objetos, clases, DOM, BOM, javascript, html">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://kit.fontawesome.com/35e1f586d0.js" crossorigin="anonymous"></script>
+  <title>Aprendamos - BS</title>
+</head>
+
+<body class="body">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <div class="container">
+        <a class="navbar-brand titulo-cursiva active" aria-current="page" href="../index.html">
+          <p class="textIni"> <img src="../images/logo.png" class="logoNav" alt="logo bookstore">Aprendamos - Bookstore
+          </p>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-1 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/login.html" target="_blank">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/catalogo.html" target="_blank">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/admin.html" target="_blank">Administración</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../pages/nosotros.html" target="_blank">Nosotros</a>
+            </li>
+           <li class="nav-item oscuro">
+              <label class="boton">
+              <input class="botonespacio" type="checkbox">
+              <span class="slider round"></span>
+              </label>
+            </li> 
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="usuarioI">
+      <div class="container">
+        <section class="row">
+          <div class="d-flex justify-content-end">
+            <p id="iniSes" class="mb-lg-1 mx-3">Iniciar sesión...</p>
+            <button id="iniciarS" type="button" class="btn btn-success btn-sm mb-lg-0 mx-1">Iniciar</button>
+            <button id="cerrarS" type="button" class="btn btn-danger btn-sm mb-lg-0">Cerrar</button>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="display-6 my-4 text-center text-primary">Quienes somos</h1>
+      <hr>
+    </div>
+    <div class="my-5 row row-cols-1 p-3 fs-1 divquienes">
+      <p>Somos un grupo de lectores que decidieron emprender la tarea de llevar a cuantas mas personas sea posible el placer y los beneficios de la lectura.
+        Pocas cosas pueden cambiar de forma tan profunda la vida de una persona como un buen libro.
+        Esta pagina tiene el objetivo de que mas personas se adentren en el mundo de la lectura. Somos 4 personas con un objetivo en comun, pero con habilidades y gustos distintos.
+      </p>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-4 divnosotros">
+      <div class="col">
+        <div class="cardsobre">
+          <img src="..\images\ramiro.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Ramiro Isa Jara</h5>
+            <p class="card-text">Administrador del sitio, ademas de un buen lector<br>
+              Genero preferido: Terror<br>
+              Email: ramiroisa@mail.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="cardsobre">
+          <img src="..\images\jimena.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Jimena Gutierrez Vazquez</h5>
+            <p class="card-text">Encargada del sector de ventas y el envio.<br>
+              Genero preferido: Historia<br>
+              Email: jimenagu@mail.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="cardsobre">
+          <img src="..\images\pablodott.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Pablo Dotti</h5>
+            <p class="card-text">Programador encargado de soporte y manejo de la pagina<br>
+              Genero preferido: Belico<br>
+              Email: pablodo@mail.com<br>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="cardsobre">
+          <img src="..\images\lucas.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Lucas Rodriguez</h5>
+            <p class="card-text">Encargado del control de calidad y atencion reclamos<br>
+             Genero preferido: Policial <br>
+             Email: lucasro@mail.com<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+  <footer class="bg-foot text-light bg-secondary py-5 px-5">
+    <section class="container">
+      <div class="cont">
+        <h3 class="me-5"> Menú de navegación </h3>
+        <a href="https:/facebook.com" target="_blank" class="me-2"><i
+            class="fab fa-facebook-square fa-2x text-dark"></i></a>
+        <a href="https:/instagram.com" target="_blank" class="me-2"><i
+            class="fab fa-instagram-square fa-2x text-dark"></i></i></a>
+        <a href="https:/twitter.com" target="_blank" class="me-2"><i
+            class="fab fa-twitter-square fa-2x text-dark"></i></i></i></a>
+      </div>
+      <article class="row justify-content-center">
+        <div class="my-3 col-sm-12 col-md-4 col-lg-3">
+            <h4 class="text-left text-foot"> Catálogo </h4>
+            <div>
+                <a class="text-left text-foot text-light" href="../pages/error.html">Ciencia</a>
+            </div>
+            <div>
+                <a class="text-left text-foot text-light" href="../pages/error.html">Ciencia ficción</a>
+            </div>
+            <div>
+                <a class="text-left text-foot text-light" href="../pages/error.html">Romance</a>
+            </div>
+            <div>
+                <a class="text-left text-foot text-light" href="../pages/error.html">Superación</a>
+            </div>
+        </div>
+        <div class=" my-3 col-sm-12 col-md-4 col-lg-3">
+            <h4 class="text-left text-foot"> Autores </h4>
+            <div>
+                <a class="text-left text-foot text-light" href="../pages/error.html">Ciencia</a>
+            </div>
+            <div>
+                <a class="text-left text-foot text-light" href="../pages/error.html">Ciencia ficción</a>
+            </div>
+            <div>
+                <a class="text-left text-foot text-light" href="../pages/error.html">Romance</a>
+            </div>
+            <div>
+                <a class="text-left text-foot text-light" href="../pages/error.html">Superación</a>
+            </div>
+        </div>
+        <div class="my-3 col-sm-12 col-md-4 col-lg-3">
+            <h4 class="text-left text-foot"> Acerca de </h4>
+            <div>
+              <a class="text-left text-foot text-light" href="../pages/admin.html">Admin</a>
+            </div>
+            <div>
+              <a class="text-left text-foot text-light" href="../pages/nosotros.html">Quienes somos</a>
+            </div>
+            <div>
+              <a class="text-left text-foot text-light" href="../index.html">Horarios de atención</a>
+            </div>
+          </div>
+    </article>
+    </section>
+  </footer>
+  <script src="../js/bootstrap.min.js"></script>
+  <script type="module" src="../js/admin.js"></script>
+  <script type="module" src="../js/oscuro.js"></script>
+
+</body>
+</html>

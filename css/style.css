@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap');
+
+.textIni{
+    font-family: 'Lobster Two', cursive;
+}
+
+.parraf{
+    text-align: justify;
+}
+
+.logoNav{
+    width: 15%;
+    padding: 10px;
+}
+
+.contenedor{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.contenedor2{
+    width: 25%;
+    margin-left: 37%;
+    margin-right: 37%;
+}
+
+.borderC{
+    border: 1px solid rgb(172, 171, 171);
+    border-radius: 10px;
+}
+
+.contenedor3{
+    width: 75%;
+    margin-left: 12%;
+    margin-right: 13%;
+}
+
+.borderF{
+    border: 1px solid rgb(196, 194, 194);
+}
+
+.usuarioI{
+    border: 1px solid rgb(196, 194, 194);
+    font-family: 'Lobster Two', cursive;
+    font-size: large;
+    color: rgb(79, 79, 82);
+}
+
+.textForm{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.cardsobre{
+    margin: 20px auto;
+    width: 90%;
+    border: dimgrey solid;
+    border-radius: 10px;
+}
+.divnosotros{
+    margin: auto;
+}
+.mapa{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+.rob1{
+    border-radius: 5%;
+}
+.divquienes{
+    margin: 20px auto;
+    width: 90%;
+    border: dimgrey solid;
+    border-radius: 10px;
+}
+/* Estilo del modo oscuro */
+.oscuro{
+   display: flex;
+   justify-content: center;
+    align-items: center;
+}
+.boton{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 40PX;
+height: 20PX;
+margin-left: 10px;
+border: rgb(172, 171, 171) solid;
+border-radius: 10px;
+}
+.boton input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.botonespacio{
+ padding: auto;
+ margin: auto;
+}
+.slider{
+position: absolute;
+cursor: pointer;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-color: rgb(194, 196, 197);
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    right: 5px;
+    bottom:5px;
+    top: 1px;
+    background-color: rgb(255, 255, 255);
+    }
+input:checked + .slider{
+    background-color: rgba(79, 122, 201, 1);
+}
+input:focus + .slider::before{
+    background-color: rgb(255, 255, 255);
+}
+input:checked + .slider::before{
+    transform: translateX(16PX);
+}
+.slider.round{
+    border-radius: 10px;
+}
+.slider.round::before{
+    border-radius: 50%;
+}
+.cambio-color{
+    background-color: rgba(24, 24, 24, 0.87);
+    color: rgba(241, 235, 235, 0.925);
+}
+.cambio-color-card{
+    background-color: rgba(24, 24, 24, 0.87);
+    color: rgba(241, 235, 235, 0.925);
+}
+.cambio-color-section{
+    background-color: rgba(24, 24, 24, 0.87)!important;
+    color: rgba(241, 235, 235, 0.925);
+} 
+ 
+/*fin de estilo modo oscuro*/
+@media (max-width: 992px){
+    .contenedor{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .borderF{
+        border: 1px solid rgb(196, 194, 194);
+    }
+
+    .contenedor2{
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .rob1{
+        width: 80vw;
+        border-radius: 5%;
+    }
+    .cardsobre{
+        margin: 20px auto;
+        width: 100%;
+        border: dimgrey solid;
+        text-align: center;
+    }
+    .cardsobre img{
+        padding: 2vw;
+    }
+    .oscuro{
+        display: flex;
+        justify-content: left;
+         align-items: center;
+     }
+     .mapa{
+        display: flex;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
+@media (max-width: 768px){
+    .cardsobre{
+        margin: 10px auto;
+        width: 100%;
+        border: dimgrey solid;
+        text-align: center;
+    }
+    .cardsobre img{
+        padding: auto;
+    }
+    .oscuro{
+        display: flex;
+        justify-content: left;
+         align-items: center;
+     }
+     .mapa{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .rob1{
+        border-radius: 5%;
+    }
+}
+@media (max-width: 576px){
+    .contenedor{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .borderF{
+        border: 1px solid rgb(196, 194, 194);
+    }
+
+    .contenedor2{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .container{
+        width: 90%;
+    }
+    .rob1{
+        width: 90vw;
+        border-radius: 5%;
+    }
+    .cardsobre{
+        margin: 20px auto;
+        width: 100%;
+        height: auto;
+        border: dimgrey solid;
+        text-align: center;
+    }
+    .cardsobre img{
+        padding: auto;
+    }
+    .oscuro{
+        display: flex;
+        justify-content: left;
+         align-items: center;
+     }
+     .mapa{
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+}
