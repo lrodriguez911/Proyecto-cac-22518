@@ -6,3 +6,4 @@ fetch(URL)
 .then(e => e.json())
 .then(ejason => console.log(ejason.name))
 /* .then(ejason => ejason.map(e => app.innerHTML(<li>{e.name}</li>))) */
+/* agregar algo */
