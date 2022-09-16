@@ -58,8 +58,13 @@
   <main>
     <div class="container">
         <div class="api">
-            <input type="text">
+          <form action="" method="get">
+            <label for="GET-name">Nombre:</label>
+            <input id="GET-name" type="text" name="name">
+            <input type="submit" value="Save">
+          </form>
         </div>
+        <p id="valueInput"></p>
     </div>
     
   </main>
@@ -71,7 +76,7 @@
   </footer>
   
   <script type="module" src="../js/api.js"></script>
-  <script type="module" src="../js/oscuro.js"></script>
+  <!-- <script type="module" src="../js/oscuro.js"></script> -->
 
 </body>
 </html>
