@@ -1,5 +1,5 @@
 const app = document.querySelector('.api')
-const URL = 'https://swapi.dev/api/people/1'
+const URL = 'https://swapi.dev/api/'
 const valueInput = document.getElementById('valueInput')
 const INPUT = document.getElementById('GET-name')
 
