@@ -83,10 +83,10 @@
 	 transition: top 0.4s ease, transform 0.4s ease;
 }
  #burger.active .bun.top {
-	 transform: translate(-50%, -50%) rotate(-225deg);
+	 transform: translate(-85%, -50%) rotate(-90deg);
 }
  #burger.active .bun.bottom {
-	 transform: translate(-50%, -50%) rotate(405deg);
+	 transform: translate(-15%, -50%) rotate(90deg);
 }
  #burger.active .filling {
 	 transform: translate(-50%, -50%) rotate(-90deg);
@@ -102,7 +102,9 @@
 	 top: 80px;
 	 bottom: 0px;
 	 padding-right: 16px;
-	 width: 300px;
+	 width: 30%;
+	 height: 50%;
+	 border-radius: 0 5% 5% 0;
 }
  nav.show {
 	 transform: translatex(0%);
@@ -130,7 +132,7 @@
 }
  nav ul li:hover {
 	 width: 100%;
-	 padding: 0px 16px 0px 0px;
+	 padding: 20px 16px 0px 0px;
 	 color: black;
 }
  nav ul li a {
