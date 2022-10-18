@@ -20,11 +20,55 @@
   </head>
 
   <body class="body">
-    <main>
-      <div>
-        <h1 class="titulo">Videojuegos de la franquicia</h1>
-        <hr />
+    <header>
+      <div class="header-logo">
+        <a
+          class="enlace-logo"
+          aria-current="page"
+          href="../index.html"
+        >
+          <img
+            src="/images/starwarslogo.png"
+            width="50px"
+            class="logoNav"
+            alt="logo star wars"
+          />
+        </a>
+        
       </div>
+      <div id="container">
+        <div id="burger">
+          <div class="bun top"></div>
+          <div class="filling"></div>
+          <div class="bun bottom"></div>
+        </div>
+      </div>
+      
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li class="green">
+            <a href="/pages/peliculas.html">Peliculas</a>
+          </li>
+          <li class="red">
+            <a href="/pages/series.html">Series</a>
+          </li>
+          <li class="yellow">
+            <a href="/pages/videojuegos.html">Videojuegos</a>
+          </li>
+          <li class="purple">
+            <a href="#">Personajes</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div>
+      <h1 class="titulo">Videojuegos de la franquicia</h1>
+      <hr />
+    </div>
+    <main>
       <div class="contenedor-card">
         <div class="card">
           <img
@@ -90,8 +134,7 @@
     </main>
 
     <footer class="footer">
-      <div>
-        <div class="cont">
+        <div>
           <h3 class="me-5">Redes Sociales</h3>
           <a
             href="https://www.facebook.com/starwarsla/?brand_redir=169299103121699"
@@ -120,7 +163,7 @@
             ><i class="fab fa-brands fa-youtube fa-2x text-dark"></i>
           </a>
         </div>
-        <article class="footer-article">
+        <div>
           <div class="">
             <h4 class="">
               <a class="footer-pages" href="/index.html"> Home</a>
@@ -143,9 +186,9 @@
               <a class="footer-pages" href="/index.html"> Contacto</a>
             </h4>
           </div>
-        </article>
-      </div>
+        </div>
     </footer>
+    <script type="module" src="../js/botonHamburguesa.js"></script>
     <script type="module" src="../js/oscuro.js"></script>
   </body>
 </html>
