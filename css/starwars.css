@@ -1,0 +1,520 @@
+
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+* { padding: 0; margin: 0; }
+
+body, html
+{
+  width: 100%;
+  height: 100%;
+  font-family: "Droid Sans", arial, verdana, sans-serif;
+  font-weight: 700;
+  color: #ff6;
+  background-color: #000;
+  overflow: hidden;
+}
+
+p#start
+{
+  position: relative;
+  width: 16em;
+  font-size: 200%;
+  font-weight: 400;
+  margin: 20% auto;
+  color: #4ee;
+  opacity: 0;
+  z-index: 1;
+  animation: intro 3.8s ease-out;
+}
+
+.end{
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  animation: intro 180s infinite;
+  animation-delay: 180s;
+  top: 400px;
+  left: 250px;
+}
+
+@keyframes intro {
+  0% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+h1
+{
+  position: absolute;
+  width: 2.6em;
+  left: 50%;
+  top: 25%;
+  font-size: 10em;
+  text-align: center;
+  margin-left: -1.3em;
+  line-height: 0.8em;
+  letter-spacing: -0.05em;
+  color: #000;
+  text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
+  opacity: 0;
+  z-index: 1;
+  animation: logo 10s ease-out 4s;
+}
+
+h1 sub
+{
+  display: block;
+  font-size: 0.3em;
+  letter-spacing: 0;
+  line-height: 0.8em;
+}
+
+
+@keyframes logo {
+  0% { transform: scale(1); opacity: 1; }
+  50% { opacity: 1; }
+  100% { transform: scale(0.1); opacity: 0; }
+}
+
+/* El scroll en 3D sucede aqui, cambiar el tamaño de fuente y el text-aling para ajustar el texto*/
+#titles
+{
+  position: absolute;
+  width: 18em;
+  height: 50em;
+  bottom: 0;
+  left: 50%;
+  margin-left: -9em;
+  font-size: 600%;
+  text-align: center;
+  overflow: hidden;
+  transform-origin: 50% 100%;
+  transform: perspective(300px) rotateX(25deg);
+}
+
+#titles:after
+{
+  position: absolute;
+  content: ' ';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 60%;
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+  background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+  background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+#titles p
+{
+  text-align: justify;
+  margin: 0.8em 0;
+}
+
+#titles p.center
+{
+  text-align: center;
+}
+
+#titles a
+{
+  color: #ff6;
+  text-decoration: underline;
+}
+
+/* VELOCIDAD DEL SCROLL DE PRINCIPIO A FIN */
+#titlecontent
+{
+  position: absolute;
+  top: 100%;
+  animation: scroll 180s linear 6s;
+}
+
+/* ANIMACION DE SCROLL */
+@keyframes scroll {
+  0% { top: 100%; }
+  100% { top: -300%; }
+}
+
+footer {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #fff;
+  font-weight: 400;
+}
+footer a {
+  color: #4ee;
+}
+
+
+/* BOTON DE SONIDO -------------------------------------------------------------------------------------------------------------------------------------*/
+.player {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    left: 1800px;
+ }
+
+/* AGREGAR TRANSFORMACION AL HACER CLICK*/
+  .btn:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
+/* BOTONES DE DISNEY Y F5 -------------------------------------------------------------------------------------------------------------------------------------*/
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.item {
+  width: 35%;
+  position: relative;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.item__border {
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
+  border-radius: 10px;
+  border: 4px solid rgba(249, 249, 249, 0.1);
+  transition: transform 250ms ease-in-out, border 250ms ease-in-out, box-shadow 250ms ease-in-out;
+}
+
+.item__image {
+ width: 100%;
+ height: 100%;
+ border-radius: 5px;
+ z-index: 1;
+}
+
+.item__image.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  visibility: hidden;
+}
+
+.item:hover .item__border {
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px, rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;
+  transform: scale(1.05);
+  border: 4px solid rgba(249, 249, 249, 0.8);
+}
+
+.item:hover .item__image.hover-image {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 1;
+  visibility: visible;
+}
+
+@media only screen and (min-width: 992px) {
+  .container2 {
+    flex-direction: row;
+  }
+  .item {
+  width: 20%;
+  }
+}
+
+/* Menu Hamburguesa ------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+#container {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -25px;
+  left: -15px;
+}
+
+#burger {
+  cursor: pointer;
+  opacity: 0;
+  -webkit-animation: fadein 0.2s ease 1s forwards;
+  animation: fadein 0.2s ease 1s forwards;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#burger .filling,
+#burger .bun {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  height: 10%;
+  width: 70%;
+  transform-origin: 50% 50%;
+  transition: top 0.4s ease 0.4s, transform 0.4s ease 0.4s;
+}
+
+#burger .filling:before,
+#burger .bun:before,
+#burger .filling:after,
+#burger .bun:after {
+  content: "";
+  display: block;
+  height: 40%;
+  background: white;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -45%);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+#burger .filling:before,
+#burger .bun:before {
+  left: 0;
+  width: calc(-1px + 75%);
+  border-radius: 10px 0px 0px 10px;
+}
+
+#burger .filling:after,
+#burger .bun:after {
+  right: 0;
+  width: calc(-1px + 25%);
+}
+
+#burger:hover .bun.top:before {
+  background: #FEE;
+  box-shadow: #F00 0px 0px 10px 1px;
+}
+
+#burger:hover .bun.bottom:before {
+  background: #DFF;
+  box-shadow: #0FF 0px 0px 10px 1px;
+}
+
+#burger:hover .filling:before {
+  background: #EFE;
+  box-shadow: #0F0 0px 0px 10px 1px;
+}
+
+#burger .bun.top {
+  top: 25%;
+}
+
+#burger .bun.bottom {
+  top: 75%;
+}
+
+#burger .filling {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  -webkit-animation: green-ls-out 0.8s ease forwards;
+  animation: green-ls-out 0.8s ease forwards;
+}
+
+#burger.active .bun {
+  border-radius: 3px;
+  top: 50%;
+  transition: top 0.4s ease, transform 0.4s ease;
+}
+
+#burger.active .bun.top {
+  transform: translate(-50%, -50%) rotate(-225deg);
+}
+
+#burger.active .bun.bottom {
+  transform: translate(-50%, -50%) rotate(405deg);
+}
+
+#burger.active .filling {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  -webkit-animation: green-ls-in 0.8s ease forwards;
+  animation: green-ls-in 0.8s ease forwards;
+}
+
+nav {
+  font-family: Open Sans;
+  color: white;
+  background: #111;
+  position: absolute;
+  transform: translatex(-100%);
+  transition: transform 0.2s ease;
+  top: 80px;
+  bottom: 0px;
+  padding-right: 16px;
+  width: 300px;
+}
+
+nav.show {
+  transform: translatex(0%);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  background: #ecfcff;
+  box-shadow: #4df 0px 0px 0px 2px;
+  font-size: 1.75em;
+  line-height: 1.25em;
+  padding: 0px;
+  padding-left: 0px;
+  margin: 16px 0px;
+  width: 0;
+  border-radius: 0px 100px 100px 0px;
+  transition: width 0.2s ease, padding 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
+}
+
+nav ul li:hover {
+  box-shadow: #4df 0px 0px 20px 2px;
+  text-shadow: #4df 0px 0px 6px, #4df 0px 0px 10px;
+}
+
+nav ul li:hover {
+  width: 100%;
+  padding: 0px 16px 0px 0px;
+  color: black;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  width: 300px;
+  color: inherit;
+  padding-left: 16px;
+}
+
+nav ul li.green {
+  background: #e6ffe6;
+  box-shadow: #0F0 0px 0px 0px 2px;
+}
+
+nav ul li.green:hover {
+  box-shadow: #0F0 0px 0px 20px 2px;
+  text-shadow: #0F0 0px 0px 6px, #0F0 0px 0px 10px;
+}
+
+nav ul li.red {
+  background: #ffe6e6;
+  box-shadow: #F00 0px 0px 0px 2px;
+}
+
+nav ul li.red:hover {
+  box-shadow: #F00 0px 0px 20px 2px;
+  text-shadow: #F00 0px 0px 6px, #F00 0px 0px 10px;
+}
+
+nav ul li.purple {
+  background: #fae6fa;
+  box-shadow: #c0c 0px 0px 0px 2px;
+}
+
+nav ul li.purple:hover {
+  box-shadow: #c0c 0px 0px 20px 2px;
+  text-shadow: #c0c 0px 0px 6px, #c0c 0px 0px 10px;
+}
+
+nav ul li.yellow {
+  background: #ffffe6;
+  box-shadow: #FF0 0px 0px 0px 2px;
+}
+
+nav ul li.yellow:hover {
+  box-shadow: #FF0 0px 0px 20px 2px;
+  text-shadow: #FF0 0px 0px 6px, #FF0 0px 0px 10px;
+}
+
+@-webkit-keyframes green-ls-in {
+  0% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-90deg) translate(200%, 0%);
+  }
+}
+
+@keyframes green-ls-in {
+  0% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-90deg) translate(200%, 0%);
+  }
+}
+
+@-webkit-keyframes green-ls-out {
+  0% {
+    transform: translate(-50%, -200%) rotate(-90deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
+
+@keyframes green-ls-out {
+  0% {
+    transform: translate(-50%, -200%) rotate(-90deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    Opacity: 0;
+  }
+
+  to {
+    Opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    Opacity: 0;
+  }
+
+  to {
+    Opacity: 1;
+  }
+}
+
+
+
+
+ 
