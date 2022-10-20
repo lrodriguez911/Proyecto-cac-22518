@@ -1,5 +1,5 @@
-function togglePlay(video) {
-    var audio = document.getElementsByTagName("audio")[0];
+function togglePlay() {
+    let audio = document.getElementsByTagName("audio")[0];
     if (audio) {
       if (audio.paused) {
           audio.play();
@@ -10,8 +10,7 @@ function togglePlay(video) {
       }
     }
   }
-
-
+/* Barra */
   const nav = document.querySelector('nav')
 
   document.querySelector('#burger').addEventListener('click',(e) => {

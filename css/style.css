@@ -24,7 +24,7 @@
   padding: 0;
 }
 html, body {
-  background: rgb(73, 73, 73);
+  background: rgb(0, 0, 0);
 }
 a, a:link,
 a:visited,
@@ -404,81 +404,7 @@ footer div{
 .footer-pages {
   color: white;
 }
-/* Estilo del modo oscuro */
-.oscuro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.boton {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 20px;
-  margin-left: 10px;
-  border: rgb(172, 171, 171) solid;
-  border-radius: 10px;
-}
-.boton input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.botonespacio {
-  padding: auto;
-  margin: auto;
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: rgb(194, 196, 197);
-}
-.slider::before {
-  position: absolute;
-  content: "";
-  height: 13px;
-  width: 13px;
-  left: 4px;
-  right: 4px;
-  bottom: 0px;
-  top: 1px;
-  background-color: rgb(255, 255, 255);
-}
-input:checked + .slider {
-  background-color: rgba(79, 122, 201, 1);
-}
-input:focus + .slider::before {
-  background-color: rgb(255, 255, 255);
-}
-input:checked + .slider::before {
-  transform: translateX(14px);
-}
-.slider.round {
-  border-radius: 10px;
-}
-.slider.round::before {
-  border-radius: 50%;
-}
-.cambio-color {
-  background-color: rgba(24, 24, 24, 0.87);
-  color: rgba(241, 235, 235, 0.925);
-}
-.cambio-color-card {
-  background-color: rgba(24, 24, 24, 0.87);
-  color: rgba(241, 235, 235, 0.925);
-}
-.cambio-color-section {
-  background-color: rgba(24, 24, 24, 0.87) !important;
-  color: rgba(241, 235, 235, 0.925);
-}
 
-/*fin de estilo modo oscuro*/
 @media (max-width: 992px) {
   .contenedor {
     width: 80%;
@@ -508,11 +434,7 @@ input:checked + .slider::before {
   .cardsobre img {
     padding: 2vw;
   }
-  .oscuro {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-  }
+
   .mapa {
     display: flex;
     width: 100%;
@@ -530,11 +452,7 @@ input:checked + .slider::before {
   .cardsobre img {
     padding: auto;
   }
-  .oscuro {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-  }
+
   .mapa {
     display: flex;
     text-align: center;
@@ -578,11 +496,7 @@ input:checked + .slider::before {
   .cardsobre img {
     padding: auto;
   }
-  .oscuro {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-  }
+
   .mapa {
     width: 100%;
     display: flex;
