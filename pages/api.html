@@ -1,90 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="author"
+      content="Lucas Rodriguez, Matias Solis y Maria Acevedo"
+    />
+    <meta name="description" content="Proyecto javascript Star wars " />
+    <meta
+      name="keywords"
+      content="objetos, clases, DOM, BOM, javascript, html"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="https://kit.fontawesome.com/35e1f586d0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Star Wars</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Grupo 4">
-  <meta name="description" content="Proyecto javascript productos ">
-  <meta name="keywords" content="objetos, clases, DOM, BOM, javascript, html">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/botonHamburguesa.css">
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://kit.fontawesome.com/35e1f586d0.js" crossorigin="anonymous"></script>
-  <title>Star Wars</title>
-</head>
-
-<body class="body">
-  <header>
-    <div class="header-logo">
-      <a
-        class="enlace-logo"
-        aria-current="page"
-        href="../index.html"
-      >
-        <img
-          src="/images/starwarslogo.png"
-          width="50px"
-          class="logoNav"
-          alt="logo star wars"
-        />
-      </a>
-      
-    </div>
-    <div id="container">
-      <div id="burger">
-        <div class="bun top"></div>
-        <div class="filling"></div>
-        <div class="bun bottom"></div>
+  <body class="body">
+    <header>
+      <div class="header-logo">
+        <a class="enlace-logo" aria-current="page" href="../index.html">
+          <img
+            src="/images/starwarslogo.png"
+            width="50px"
+            class="logoNav"
+            alt="logo star wars"
+          />
+        </a>
       </div>
-    </div>
-    <nav>
-      <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li class="green">
-          <a href="/pages/peliculas.html">Peliculas</a>
-        </li>
-        <li class="red">
-          <a href="/pages/series.html">Series</a>
-        </li>
-        <li class="yellow">
-          <a href="/pages/videojuegos.html">Videojuegos</a>
-        </li>
-        <li class="purple">
-          <a href="#">Personajes</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <div class="container">
-        <div class="app">
-          <form action="" method="get">
-            <label for="GET-name">Nombre:</label>
-            <input id="GET-name" type="text" name="name">
-            <input type="submit" value="Save">
-          </form>
+      <div id="container">
+        <div id="burger">
+          <div class="bun top"></div>
+          <div class="filling"></div>
+          <div class="bun bottom"></div>
         </div>
-        <p id="valueInput"></p>
-        <ul id="api">
+      </div>
 
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li class="green">
+            <a href="/pages/peliculas.html">Peliculas</a>
+          </li>
+          <li class="red">
+            <a href="/pages/series.html">Series</a>
+          </li>
+          <li class="yellow">
+            <a href="/pages/videojuegos.html">Videojuegos</a>
+          </li>
+          <li class="purple">
+            <a href="#">Personajes</a>
+          </li>
         </ul>
-    </div>
-    
-  </main>
+      </nav>
+    </header>
 
-  <footer class="bg-foot text-light bg-secondary py-5 px-5">
-    <section class="container">
-      
-    </section>
-  </footer>
-  
-  <script type="module" src="/js/api.js"></script>
-  <script type="module" src="/js/botonHamburguesa.js"></script>
+    <main>
+      <div>
+        <button id="buttonLuke" type="button" value="Luke Skywalker">
+          Luke Skywalker
+        </button>
+        <div class="contenedor-card">
+          <div id="api">
+            
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div>
+        <h3 class="me-5">Redes Sociales</h3>
+        <a
+          href="https://www.facebook.com/starwarsla/?brand_redir=169299103121699"
+          target="_blank"
+          class="me-2"
+        >
+          <i class="fab fa-facebook-square fa-2x text-dark"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/starwarsespanol/?fbclid=IwAR0N6ffQt02DUi4zGl0Q9egKeaeqdGBnOfRc6FMSlCvj5-cjACNSzghjGAc"
+          target="_blank"
+          class="me-2"
+        >
+          <i class="fab fa-instagram-square fa-2x text-dark"></i>
+        </a>
+        <a
+          href="https://twitter.com/StarWarsLATAM?fbclid=IwAR1ewD5L-5Z8CSZcTwT4mzC7ONYCVsH5OWA9iKrVex-DgTNtsk4fgY_fRa4"
+          target="_blank"
+          class="me-2"
+          ><i class="fab fa-twitter-square fa-2x text-dark"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/user/StarWarsLA"
+          target="_blank"
+          class="me-2"
+          ><i class="fab fa-brands fa-youtube fa-2x text-dark"></i>
+        </a>
+      </div>
+      <div>
+        <div class="">
+          <h4 class="">
+            <a class="footer-pages" href="/index.html"> Home</a>
+          </h4>
+        </div>
+        <div class="">
+          <h4 class="">
+            <a class="footer-pages" href="/pages/peliculas.html"> Peliculas</a>
+          </h4>
+        </div>
+        <div class="">
+          <h4 class="">
+            <a class="footer-pages" href="/index.html"> Videojuegos</a>
+          </h4>
+        </div>
+        <div class="">
+          <h4 class="">
+            <a class="footer-pages" href="/index.html"> Contacto</a>
+          </h4>
+        </div>
+      </div>
+    </footer>
 
-</body>
+    <script type="module" src="/js/api.js"></script>
+    <script type="module" src="/js/botonHamburguesa.js"></script>
+  </body>
 </html>
