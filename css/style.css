@@ -25,6 +25,7 @@
 }
 html, body {
   background: rgb(0, 0, 0);
+  
 }
 a, a:link,
 a:visited,
@@ -32,7 +33,7 @@ a:active {
   text-decoration: none;
 } 
 body{
-  font-family: Starjholl;
+  font-family: Starjholl ; 
 }
 header{
  display: flex;
