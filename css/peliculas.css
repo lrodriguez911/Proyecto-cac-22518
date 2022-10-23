@@ -5,13 +5,13 @@
     font-family: sans-serif ;
 }
 
-body {
+/* body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background: rgb(0, 0, 0);
-}
+} */
 
 .titulo{
     font-family:'Bowlby One SC', cursive;
