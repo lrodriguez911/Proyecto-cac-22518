@@ -55,7 +55,7 @@ header div{
   background-size: cover;
 }
 main{
-  background-color: dimgrey;
+  background-color: rgba(41, 40, 40, 0.802);
 }
 .titulo{
   width: auto;
@@ -80,11 +80,11 @@ h1 {
 
  #container {
    display: flex;
-	 width: 15%;
-	 height: 10%;
+	 width: 18%;
+	 height: 13%;
 	 position: absolute;
-   padding: 5px;
-   align-items: center;
+   /* padding: 5px; */
+   margin-top: 13px;
 }
  #burger {
    display: flex;
@@ -246,6 +246,14 @@ h1 {
 	 box-shadow: #ff0 0px 0px 20px 2px;
 	 text-shadow: #ff0 0px 0px 6px, #ff0 0px 0px 10px;
 }
+ nav ul li.blue {
+	 background: #ffffe6;
+	 box-shadow: blue 0px 0px 0px 2px;
+}
+ nav ul li.blue:hover {
+	 box-shadow: blue 0px 0px 20px 2px;
+	 text-shadow: blue 0px 0px 6px, blue 0px 0px 10px;
+}
  @keyframes laser-verde-baja {
 	 0% {
 		 transform: translate(-50%, -50%) rotate(180deg);
@@ -283,12 +291,12 @@ h1 {
 
 /* Cards Videojuegos */
 .contenedor-card{
-  margin: 20px;
   display: grid;
   gap: 1rem;
-  grid-auto-rows: 70vh;
+  grid-auto-rows: 100vh;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  
+  padding-top: 5%;
+  padding-bottom: 10%;
 }
 .contenedor-card .card{
 background-size: cover;
@@ -298,16 +306,18 @@ overflow: hidden;
 text-align: center;
 transition: all 0.5s;
 margin: 20px 10px 20px ;
+color: white;
 }
 .contenedor-card .card:hover{
 transform: translateY(-15px);
 box-shadow: #0f0 0px 0px 20px 2px;
 }
 .contenedor-card .card img{
-width: 95%;
-height: 60%;
-border-radius: 8px;
-margin: 5px;
+width: 100%;
+object-fit: cover;
+object-position: top;
+height: 75%;
+border-radius: 2%;
 }
 
 /* Fin de Cards Videojuegos */
@@ -383,22 +393,30 @@ margin: 5px;
   border-radius: 10px;
 }
 footer {
-  height: 100px;
+  
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   color: white;
   padding: 20px;
+  margin: 20px;
 }
 .footer a {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  margin: 5px;
+}
+.contenedor-footer-pages{
+  display: flex;
+  flex-direction: column;
 }
 footer div{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
 }
 .footer-pages {
   color: white;
@@ -462,6 +480,10 @@ footer div{
   }
 }
 @media (max-width: 576px) {
+  #container{
+    padding: 10px;
+    width: 100px;
+  }
   .contenedor {
     width: 80%;
     margin-left: 10%;
