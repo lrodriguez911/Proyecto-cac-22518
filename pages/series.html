@@ -66,11 +66,17 @@
         </ul>
       </nav>
     </header>
-    <p id="start">fanticos de STAR WARS, las han visto todas???...</p>
+    <div class="player btn" onclick="togglePlay(this)">
+      <img src="/images/sound2.ico" id="button">
+      <audio autoplay>
+          <source src="/Audio/Starwars-MainTheme.mp3" />
+      </audio>
+  </div>
+    <p id="start">Fanaticos de STAR WARS, las han visto todas???...</p>
     <h1>STAR WARS SERiES</h1>
     <div id="titles">
       <div id="titlecontent">
-        <sub>orden cronologico ligero</sub>
+        <sub>ORDEN CRONOLOGICO LIGERO</sub>
         <p class="center">
           <img
             src="/images/Series/Orden_cronologico.jpg"
@@ -210,7 +216,7 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
+    <footer class="footer endFooter">
       <div class="contenedor-footer-pages">
         <h3 class="me-5">Redes Sociales</h3>
         <div>

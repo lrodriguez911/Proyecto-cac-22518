@@ -14,6 +14,7 @@ function togglePlay() {
     }
   }
 
+
 /* Barra hamburguesa */
 /* Barra */
   const nav = document.querySelector('nav')
