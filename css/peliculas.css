@@ -2,31 +2,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif ;
 }
 
-/* body {
+.main-peliculas {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: rgb(0, 0, 0);
-} */
+    background: rgba(41, 40, 40, 0.802);
+    flex-wrap: wrap;
+}
 
 .titulo{
-    font-family:'Bowlby One SC', cursive;
-    color: rgb(211, 250, 40);
-    margin: 0px;
-    position: absolute;
-    font-size: 40px;
-    margin-top: -500px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .card{
     position: static;
     width: 450px;
-    height: 300px;
-    margin: 10px;
+    height: 450px;
+    margin: 20px;
 }
 
 .card .face{
@@ -36,14 +33,9 @@
     backface-visibility: hidden;
     border-radius: 10px;
     overflow: hidden;
-    transition: .5s;
+    transition: ease .5s;
+    font-size: 2rem;
 }
-
-.card .front{
-    transform: perspective(200px) rotateY('0deg');
-    box-shadow: 0 5px 10px #000;
-}
-
 .card .front img{
     position: absolute;
     width: 100%;
@@ -51,8 +43,13 @@
     object-fit: cover;
 }
 
+.card .front{
+    transform: rotateY('0deg');
+    box-shadow: 0 5px 10px #000;
+}
+
 .card .back{
-    transform: perspective(100px) rotateY(180deg);
+    transform: rotateY(180deg);
     background: rgb(3, 35, 54);
     padding: 15px;
     color: #f3f3f3;
@@ -61,8 +58,10 @@
     justify-content: space-between;
     text-align: center;
     box-shadow: 0 5px 10px #000;
-    margin-top: -300px;
+    margin-top: -450px;
+    font-size: 1.5rem;
 }
+
 
 .card .back .link {
     border-top: solid 1px #f3f3f3;
@@ -78,15 +77,15 @@
 
 .card .back p{
     letter-spacing: 1px;
-    font-size: 10px;
+    font-size: 1rem;
     bottom: -10px;
 }
 
 .card:hover .front{
-    transform: perspective(200px) rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .card:hover .back{
-    transform: perspective(200px) rotateY(360deg);
+    transform: rotateY(360deg);
 }
 

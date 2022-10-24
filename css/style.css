@@ -168,7 +168,7 @@ h1 {
 	 animation: laser-verde-baja 0.8s ease forwards;
 }
  nav {
-	 font-family: Open Sans;
+	 font-family: Starjholl;
 	 color: white;
 	 background: #111;
 	 position: absolute;
@@ -183,6 +183,9 @@ h1 {
 }
  nav.show {
 	 transform: translatex(0%);
+   z-index: 1;
+   width: 25vw;
+   margin-top: 5vh;
 }
  nav ul {
 	 list-style: none;
@@ -195,8 +198,8 @@ h1 {
 	 box-shadow: #4df 0px 0px 0px 2px;
 	 font-size: 1.75em;
 	 line-height: 1.25em;
-	 padding: 0px;
-	 padding-left: 0px;
+	 /* padding: 0px;
+	 padding-left: 0px; */
 	 margin: 16px 0px;
 	 width: 0;
 	 border-radius: 0px 100px 100px 0px;
@@ -433,93 +436,20 @@ footer div{
     margin-right: 10%;
   }
 
-  .borderF {
-    border: 1px solid rgb(196, 194, 194);
-  }
-
-  .contenedor2 {
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-  .rob1 {
-    width: 80vw;
-    border-radius: 5%;
-  }
-  .cardsobre {
-    margin: 20px auto;
-    width: 100%;
-    border: dimgrey solid;
-    text-align: center;
-  }
-  .cardsobre img {
-    padding: 2vw;
-  }
-
-  .mapa {
-    display: flex;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-  }
-}
-@media (max-width: 768px) {
-  .cardsobre {
-    margin: 10px auto;
-    width: 100%;
-    border: dimgrey solid;
-    text-align: center;
-  }
-  .cardsobre img {
-    padding: auto;
-  }
 
   .mapa {
     display: flex;
     text-align: center;
     justify-content: center;
   }
-  .rob1 {
-    border-radius: 5%;
-  }
+
 }
 @media (max-width: 576px) {
-  #container{
-    padding: 10px;
-    width: 100px;
-  }
-  .contenedor {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
-  .borderF {
-    border: 1px solid rgb(196, 194, 194);
-  }
-
-  .contenedor2 {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
-  .container {
-    width: 90%;
-  }
-  .rob1 {
-    width: 90vw;
-    border-radius: 5%;
-  }
-  .cardsobre {
-    margin: 20px auto;
-    width: 100%;
-    height: auto;
-    border: dimgrey solid;
-    text-align: center;
-  }
-  .cardsobre img {
-    padding: auto;
+  nav.show {
+    transform: translatex(0%);
+    z-index: 1;
+    width: 55vw;
+    margin-top: 5vh;
   }
 
   .mapa {
