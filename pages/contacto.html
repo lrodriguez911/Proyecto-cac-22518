@@ -76,15 +76,15 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container form-contacto">
         <div class="row">
           <div class="col-sm-12 col-md-7 col-lg-5">
             <h3>
-              <span><i class="fas fa-envelope"></i></span> Email
+              <span><i class="fas fa-envelope"></i></span> starwars@gmail.com
             </h3>
             <br />
             <h3>
-              <span><i class="fas fa-phone-alt"></i></span> Telefono
+              <span><i class="fas fa-phone-alt"></i></span> 011 12345678
             </h3>
             <br />
             <div class="container mb-4">
@@ -99,7 +99,7 @@
               ></iframe>
             </div>
           </div>
-          <div class="col-sm-12 col-md-5 col-lg-7">
+          <form class="col-sm-12 col-md-5 col-lg-7 " action="https://formsubmit.co/lrodriguez.arevalosc@gmail.com" method="POST">
             <div class="mb-3">
               <span><i class="fas fa-user fa-2x"></i></span>
               <label for="nombre" class="form-label fs-2 text">Nombre</label>
@@ -110,6 +110,7 @@
                 placeholder="Juan Manuel"
                 required
                 maxlength="50"
+                name="Nombre"
               />
             </div>
             <div class="mb-3">
@@ -124,19 +125,19 @@
                 placeholder="Perez"
                 required
                 maxlength="60"
+                name="Apellido"
               />
             </div>
             <div class="mb-3">
               <span><i class="fas fa-envelope fa-2x"></i></span>
-              <label for="correo" class="form-label fs-2 text"
-                >E-Mail</label
-              >
+              <label for="correo" class="form-label fs-2 text">E-Mail</label>
               <input
                 type="email"
                 class="form-control"
                 id="correo"
                 placeholder="nombre@ejemplo.com"
                 required
+                name="E-mail"
               />
             </div>
             <div class="mb-3">
@@ -148,8 +149,9 @@
                 type="tel"
                 class="form-control"
                 id="telefono"
-                placeholder="+54 11 381-1234567"
+                placeholder="381-1234567"
                 required
+                name="Telefono"
               />
             </div>
             <div class="mb-3">
@@ -162,14 +164,17 @@
                 class="form-control"
                 id="exampleFormControlTextarea1"
                 rows="3"
+                name="Mensaje"
               ></textarea>
             </div>
             <div class="d-grid gap-2">
-              <button type="submit" class="btn btn-primary mb-3" id="enviar">
+              <button type="submit" class="btn btn-outline-light mb-3" id="enviar">
                 Enviar
               </button>
             </div>
-          </div>
+            <input type="hidden" name="_next" value="http://127.0.0.1:5501/pages/contacto.html">
+            <input type="hidden" name="_captcha" value="false">
+          </form>
         </div>
       </div>
     </main>
@@ -222,7 +227,9 @@
         </div>
         <div>
           <h4>
-            <a class="footer-pages" href="pages/videojuegos.html"> Videojuegos</a>
+            <a class="footer-pages" href="pages/videojuegos.html">
+              Videojuegos</a
+            >
           </h4>
         </div>
         <div>
