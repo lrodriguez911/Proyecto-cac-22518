@@ -1,128 +1,281 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="author"
+      content="Lucas Rodriguez, Matias Solis y Maria Acevedo"
+    />
+    <meta name="description" content="Proyecto javascript Star wars " />
+    <meta
+      name="keywords"
+      content="objetos, clases, DOM, BOM, javascript, html"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="/css/starwars.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/js/seriesstarwars.js"></script>
-    <title>Series Star Wars</title>
-</head>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+    src="https://kit.fontawesome.com/f6c970f80c.js"
+    crossorigin="anonymous"
+  ></script>
+    <title>Star Wars</title>
+  </head>
 
-<body>
-    <p id="start">FANATICOS DE STAR WARS, LAS HAN VISTO TODAS???...</p>
-    <h1>STAR WARS SERIES</h1>
-    <div id="titles">
-        <div id="titlecontent">
-            <sub>Orden Cronológico ligero</sub>
-            <p class="center"><img src="/images/Series/Orden_cronologico.jpg" alt="Orden Cronológico" width="1300"></p>
-            <p>Este es el orden Cronológico en el que fueron sucediendo todos los acontecimientos en el universo de Star
-                Wars.</p>
-            <br><br><br>
-            <p>¿Has visto las peliculas y te has quedado con las ganas de conocer mas a fondo el universo de star wars?
-                Pues es hora de comencer a ver las series, en ellas encontraras toda la historia y los
-                acontecimientos que ocurren antes, durante y despues de las peliculas de star wars.
-                todas ellas ya están disponibles en Disney+.</p><br><br>
-            <p>
-            <h3>SERIES DE STAR WARS EN ORDEN CRONOLOGICO</h3>
-            </p>
-            <img src="/images/Series/Star Wars The Clone Wars 2008-2014.jpg" alt="Orden Cronológico" width="1000">
-            <p>Mientras las Guerras Clon barren toda la galaxia, los heroicos caballeros Jedi luchan por mantener el
-                orden y
-                restablecer la paz. Son cada vez más los sistemas que caen presa de las fuerzas del lado oscuro,
-                mientras la
-                República Galáctica va quedando paulatinamente bajo el dominio de los Separatistas y su interminable
-                ejército
-                droide.</p>
-            <br>
-            <img src="/images/Series/Obi-Wan Kenobi.jpg" alt="Orden Cronológico" width="1000">
-            <p>En medio de la oscuridad y la derrota, sobrevive la esperanza. Tras la destrucción de la República y el
-                ascenso del
-                Imperio, el maestro Jedi Obi-Wan Kenobi debe lidiar con las consecuencias de su mayor derrota: la
-                pérdida de su
-                amigo y aprendiz, Anakin Skywalker, a manos del lado oscuro.</p>
-            <br>
-            <img src="/images/Series/Star Wars La Remesa Mala 2021.jpg" alt="Orden Cronológico" width="1000">
-            <p>Después de las casi interminables Guerras Clon, los miembros de la Remesa Mala, que difieren
-                genéticamente de sus
-                hermanos del Ejército Clon, emprenden varias misiones mercenarias mientras luchan para seguir en activo
-                y encuentran
-                nuevas metas en sus vidas.</p>
-            <br>
-            <img src="/images/Series/Star Wars Rebels.jpg" alt="Orden Cronológico" width="1000">
-            <p>La serie animada 'Star Wars Rebels' gira en torno al período temporal en el que el Imperio intenta
-                consolidar su
-                dominio en toda la galaxia. El canciller supremo Palpatine ha ideado una falsa guerra para aumentar su
-                poder dentro
-                del nuevo régimen.</p>
-            <br>
-            <img src="/images/Series/Andor.jpg" alt="Orden Cronológico" width="1000">
-            <p>Ambientada cinco años antes de los eventos de la película Rogue One,​ la serie sigue al espía Cassian
-                Andor durante los años de formación de la Alianza Rebelde. ​La serie mostrará la transformación de
-                Andor, un ladrón que se convierte en revolucionario y finalmente se une a la Rebelión contra el
-                Imperio..</p>
-            <br>
-            <img src="/images/Series/The Mandalorian.jpg" alt="Orden Cronológico" width="1000">
-            <p>El Mandaloriano (Din Djarin), interpretado por Pedro Pascal, es un pistolero solitario y cazarrecompensas
-                que a veces
-                se conoce como mando (un término genérico y posiblemente ofensivo​​ utilizado para referirse a todos los
-                mandalorianos). Es un huérfano que fue rescatado a temprana edad por los mandalorianos.</p>
-            <br>
-            <img src="/images/Series/El libro de Boba Fett.jpg" alt="Orden Cronológico" width="1000">
-            <p>El libro de Bobba Fett en España, es una serie spin-off de The Mandalorian que sigue las aventuras del
-                famoso
-                cazarrecompensas Boba Fett y su fiel compañera mercenaria Fennec Shand en la galaxia y más allá.</p>
+  <body>
+    <header>
+      <div class="header-logo">
+        <a class="enlace-logo" aria-current="page" href="../index.html">
+          <img
+            src="/images/starwarslogo.png"
+            width="50px"
+            class="logoNav"
+            alt="logo star wars"
+          />
+        </a>
+      </div>
+      <div id="container">
+        <div id="burger">
+          <div class="bun top"></div>
+          <div class="filling"></div>
+          <div class="bun bottom"></div>
         </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li class="green">
+            <a href="/pages/peliculas.html">Peliculas</a>
+          </li>
+          <li class="red">
+            <a href="/pages/series.html">Series</a>
+          </li>
+          <li class="yellow">
+            <a href="/pages/videojuegos.html">Videojuegos</a>
+          </li>
+          <li class="purple">
+            <a href="/pages/personajes.html">Personajes</a>
+          </li>
+          <li class="blue">
+            <a href="/pages/contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <p id="start">fanticos de STAR WARS, las han visto todas???...</p>
+    <h1>STAR WARS SERiES</h1>
+    <div id="titles">
+      <div id="titlecontent">
+        <sub>orden cronologico ligero</sub>
+        <p class="center">
+          <img
+            src="/images/Series/Orden_cronologico.jpg"
+            alt="Orden Cronológico"
+            width="1300"
+          />
+        </p>
+        <p>
+          Este es el orden Cronológico en el que fueron sucediendo todos los
+          acontecimientos en el universo de Star Wars.
+        </p>
+        <br /><br /><br />
+        <p>
+          ¿Has visto las peliculas y te has quedado con las ganas de conocer mas
+          a fondo el universo de star wars? Pues es hora de comencer a ver las
+          series, en ellas encontraras toda la historia y los acontecimientos
+          que ocurren antes, durante y despues de las peliculas de star wars.
+          todas ellas ya están disponibles en Disney+.
+        </p>
+        <br /><br />
+        <p>series de star wars en orden cronologico</p>
+
+        <img
+          src="/images/Series/Star Wars The Clone Wars 2008-2014.jpg"
+          alt="Orden Cronológico"
+          width="1000"
+        />
+        <p>
+          Mientras las Guerras Clon barren toda la galaxia, los heroicos
+          caballeros Jedi luchan por mantener el orden y restablecer la paz. Son
+          cada vez más los sistemas que caen presa de las fuerzas del lado
+          oscuro, mientras la República Galáctica va quedando paulatinamente
+          bajo el dominio de los Separatistas y su interminable ejército droide.
+        </p>
+        <br />
+        <img
+          src="/images/Series/Obi-Wan Kenobi.jpg"
+          alt="Orden Cronológico"
+          width="1000"
+        />
+        <p>
+          En medio de la oscuridad y la derrota, sobrevive la esperanza. Tras la
+          destrucción de la República y el ascenso del Imperio, el maestro Jedi
+          Obi-Wan Kenobi debe lidiar con las consecuencias de su mayor derrota:
+          la pérdida de su amigo y aprendiz, Anakin Skywalker, a manos del lado
+          oscuro.
+        </p>
+        <br />
+        <img
+          src="/images/Series/Star Wars La Remesa Mala 2021.jpg"
+          alt="Orden Cronológico"
+          width="1000"
+        />
+        <p>
+          Después de las casi interminables Guerras Clon, los miembros de la
+          Remesa Mala, que difieren genéticamente de sus hermanos del Ejército
+          Clon, emprenden varias misiones mercenarias mientras luchan para
+          seguir en activo y encuentran nuevas metas en sus vidas.
+        </p>
+        <br />
+        <img
+          src="/images/Series/Star Wars Rebels.jpg"
+          alt="Orden Cronológico"
+          width="1000"
+        />
+        <p>
+          La serie animada 'Star Wars Rebels' gira en torno al período temporal
+          en el que el Imperio intenta consolidar su dominio en toda la galaxia.
+          El canciller supremo Palpatine ha ideado una falsa guerra para
+          aumentar su poder dentro del nuevo régimen.
+        </p>
+        <br />
+        <img
+          src="/images/Series/Andor.jpg"
+          alt="Orden Cronológico"
+          width="1000"
+        />
+        <p>
+          Ambientada cinco años antes de los eventos de la película Rogue One,​
+          la serie sigue al espía Cassian Andor durante los años de formación de
+          la Alianza Rebelde. ​La serie mostrará la transformación de Andor, un
+          ladrón que se convierte en revolucionario y finalmente se une a la
+          Rebelión contra el Imperio..
+        </p>
+        <br />
+        <img
+          src="/images/Series/The Mandalorian.jpg"
+          alt="Orden Cronológico"
+          width="1000"
+        />
+        <p>
+          El Mandaloriano (Din Djarin), interpretado por Pedro Pascal, es un
+          pistolero solitario y cazarrecompensas que a veces se conoce como
+          mando (un término genérico y posiblemente ofensivo​​ utilizado para
+          referirse a todos los mandalorianos). Es un huérfano que fue rescatado
+          a temprana edad por los mandalorianos.
+        </p>
+        <br />
+        <img
+          src="/images/Series/El libro de Boba Fett.jpg"
+          alt="Orden Cronológico"
+          width="1000"
+        />
+        <p>
+          El libro de Bobba Fett en España, es una serie spin-off de The
+          Mandalorian que sigue las aventuras del famoso cazarrecompensas Boba
+          Fett y su fiel compañera mercenaria Fennec Shand en la galaxia y más
+          allá.
+        </p>
+      </div>
     </div>
     <div class="end container2">
-        <div class="item">
-            <div class=item__border>
-               <a href="https://www.disneyplus.com/home" target="_blank"><img class="item__image" src="/images/Series/DisneyPlano.png" /></a>
-                <img alt="" class="item__image hover-image" src="/images/Series/DisneyCastillo.gif" />
-            </div>
+      <div class="item">
+        <div class="item__border">
+          <a href="https://www.disneyplus.com/home" target="_blank"
+            ><img class="item__image" src="/images/Series/DisneyPlano.png"
+          /></a>
+          <img
+            alt=""
+            class="item__image hover-image"
+            src="/images/Series/DisneyCastillo.gif"
+          />
         </div>
-        <div class="item">
-            <div class=item__border>
-                <img class="item__image" onClick="window.location.reload();" src="/images/Series/PLAYAGAIN.png"/>
-                <img alt="" class="item__image hover-image" src="/images/Series/FondoEstrellas.gif" />
-            </div>
+      </div>
+      <div class="item">
+        <div class="item__border">
+          <img
+            class="item__image"
+            onClick="window.location.reload();"
+            src="/images/Series/PLAYAGAIN.png"
+          />
+          <img
+            alt=""
+            class="item__image hover-image"
+            src="/images/Series/FondoEstrellas.gif"
+          />
         </div>
+      </div>
     </div>
-</body>
-<footer class='credit'>
-    <div class="player btn" onclick="togglePlay(this)">
-        <img src="/images/sound2.ico" id="button">
-        <audio autoplay>
-            <source src="/Audio/Starwars-MainTheme.mp3" />
-        </audio>
-    </div>
-    <div id="container">
-        <div id="burger">
-            <div class="bun top"></div>
-            <div class="filling"></div>
-            <div class="bun bottom"></div>
+    <footer class="footer">
+      <div class="contenedor-footer-pages">
+        <h3 class="me-5">Redes Sociales</h3>
+        <div>
+          <a
+            href="https://www.facebook.com/starwarsla/?brand_redir=169299103121699"
+            target="_blank"
+          >
+            <span style="color: white"
+              ><i class="fab fa-facebook-square fa-2x"></i
+            ></span>
+          </a>
+          <a
+            href="https://www.instagram.com/starwarsespanol/?fbclid=IwAR0N6ffQt02DUi4zGl0Q9egKeaeqdGBnOfRc6FMSlCvj5-cjACNSzghjGAc"
+            target="_blank"
+          >
+            <span style="color: white">
+              <i class="fab fa-instagram-square fa-2x"></i
+            ></span>
+          </a>
+          <a
+            href="https://twitter.com/StarWarsLATAM?fbclid=IwAR1ewD5L-5Z8CSZcTwT4mzC7ONYCVsH5OWA9iKrVex-DgTNtsk4fgY_fRa4"
+            target="_blank"
+          >
+            <span style="color: white"
+              ><i class="fab fa-twitter-square fa-2x"></i
+            ></span>
+          </a>
+          <a href="https://www.youtube.com/user/StarWarsLA" target="_blank">
+            <span style="color: white"
+              ><i class="fa-brands fa-youtube fa-2x"></i
+            ></span>
+          </a>
         </div>
-    </div>
-
-    <nav>
-        <ul>
-            <li>
-                <a href="www.google.com">Home</a>
-            </li>
-            <li class="green">
-                <a href="#">Jedi</a>
-            </li>
-            <li class="red">
-                <a href="#">Sith</a>
-            </li>
-            <li class="yellow">
-                <a href="#">Sentinel</a>
-            </li>
-            <li class="purple">
-                <a href="#">Samuel L. Jackson</a>
-            </li>
-        </ul>
-    </nav>
-</footer>
+      </div>
+      <div class="contenedor-footer-pages">
+        <div>
+          <h4>
+            <a class="footer-pages" href="/index.html"> Home</a>
+          </h4>
+        </div>
+        <div>
+          <h4>
+            <a class="footer-pages" href="/pages/peliculas.html"> Peliculas</a>
+          </h4>
+        </div>
+        <div>
+          <h4>
+            <a class="footer-pages" href="pages/videojuegos.html">
+              Videojuegos</a
+            >
+          </h4>
+        </div>
+        <div>
+          <h4>
+            <a class="footer-pages" href="pages/series.html"> Series</a>
+          </h4>
+        </div>
+        <div>
+          <h4>
+            <a class="footer-pages" href="pages/contacto.html"> Contacto</a>
+          </h4>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/js/botonHamburguesa.js"></script>
+    <script type="module" src="/js/seriesstarwars.js"></script>
+  </body>
+</html>
