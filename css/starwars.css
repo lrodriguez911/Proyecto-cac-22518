@@ -21,12 +21,13 @@ p#start
   font-size: 200%;
   font-weight: 400;
   margin: 20% auto;
-  color: rgb(255, 255, 255);
+  color: hwb(189 0% 0%);
   opacity: 0;
   z-index: 1;
   animation: intro 3.8s ease-out;
 }
 
+/* APARECE LUEGO DEL FINAL DE LA ANIMACION DE SCROLL*/
 .end{
   position: absolute;
   opacity: 0;
@@ -35,6 +36,17 @@ p#start
   animation-delay: 180s;
   top: 400px;
   left: 250px;
+}
+
+/* EL FOOTER APARECE AL FINAL DE LA ANIMACION DE SCROLL*/
+.endFooter{
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  animation: intro 180s infinite;
+  animation-delay: 180s;
+  top: 750px;
+  left: 700px;
 }
 
 @keyframes intro {
@@ -156,8 +168,8 @@ footer a {
     width: 20px;
     height: 20px;
     position: absolute;
-    top: -10px;
-    left: 1800px;
+    top: 920px;
+    left: 1820px;
  }
 
 /* AGREGAR TRANSFORMACION AL HACER CLICK*/
