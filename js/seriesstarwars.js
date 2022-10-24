@@ -1,3 +1,4 @@
+/* CAMBIO DE ICONO SONIDO */
 function togglePlay(video) {
     var audio = document.getElementsByTagName("audio")[0];
     if (audio) {
@@ -11,7 +12,7 @@ function togglePlay(video) {
     }
   }
 
-
+/* Barra hamburguesa */
   const nav = document.querySelector('nav')
 
   document.querySelector('#burger').addEventListener('click',(e) => {
