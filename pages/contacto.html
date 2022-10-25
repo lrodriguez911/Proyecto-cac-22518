@@ -46,7 +46,7 @@
       <nav>
         <ul>
           <li>
-            <a href="index.html">Home</a>
+            <a href="/index.html">Home</a>
           </li>
           <li class="green">
             <a href="/pages/peliculas.html">Peliculas</a>
@@ -99,7 +99,7 @@
               ></iframe>
             </div>
           </div>
-          <form class="col-sm-12 col-md-5 col-lg-7 " action="https://formsubmit.co/lrodriguez.arevalosc@gmail.com" method="POST">
+          <form id="form" class="col-sm-12 col-md-5 col-lg-7 " action="https://formsubmit.co/lrodriguez.arevalosc@gmail.com" method="POST">
             <div class="mb-3">
               <span><i class="fas fa-user fa-2x"></i></span>
               <label for="nombre" class="form-label fs-2 text">Nombre</label>
@@ -109,7 +109,7 @@
                 id="nombre"
                 placeholder="Juan Manuel"
                 required
-                maxlength="50"
+                maxlength="20"
                 name="Nombre"
               />
             </div>
@@ -124,7 +124,7 @@
                 id="apellido"
                 placeholder="Perez"
                 required
-                maxlength="60"
+                maxlength="20"
                 name="Apellido"
               />
             </div>
@@ -161,6 +161,7 @@
                 >Mensaje</label
               >
               <textarea
+                id="textArea"
                 class="form-control"
                 id="exampleFormControlTextarea1"
                 rows="3"
@@ -246,5 +247,6 @@
     </footer>
     <script src="/js/bootstrap.min.js"></script>
     <script type="module" src="../js/botonHamburguesa.js"></script>
+    <script type="module" src="/js/validarFormulario.js"></script>
   </body>
 </html>
