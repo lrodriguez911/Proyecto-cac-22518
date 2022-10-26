@@ -362,18 +362,16 @@ nav ul li.blue:hover {
   color: white;
   font-size: 2rem;
 }
-.contenedor-card-index .card-index:hover:first-child {
-  transform: translateY(-15px);
-  box-shadow: rgb(113, 2, 85) 0px 0px 20px 2px;
-}
-.contenedor-card-index .card-index:hover:nth-child(2n) {
+
+.contenedor-card-index .card-index:hover:nth-child(odd) {
   transform: translateY(-15px);
   box-shadow: rgb(240, 0, 0) 0px 0px 20px 2px;
 }
-.contenedor-card-index .card-index:hover:last-child {
+.contenedor-card-index .card-index:hover:nth-child(even) {
   transform: translateY(-15px);
-  box-shadow: rgb(36, 0, 240) 0px 0px 20px 2px;
+  box-shadow: rgb(240, 0, 208) 0px 0px 20px 2px;
 }
+
 .contenedor-card-index .card-index img {
   display: flex;
   justify-content: center;
@@ -383,7 +381,6 @@ nav ul li.blue:hover {
   object-fit: contain;
   object-position: left;
   height: 100%;
-  border-radius: 2%;
 }
 
 
