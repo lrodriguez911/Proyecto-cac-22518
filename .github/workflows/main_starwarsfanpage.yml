@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'starwarsfanpage'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1E2B2EC11D924E3B91D0643F5FC2F32E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0F6C81EFA9064802BE7E1C5EC52ED262 }}
           package: .
